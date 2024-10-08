@@ -1,8 +1,9 @@
 document.querySelector(".submit__button").addEventListener("click", function() {
-   
+
     // -- INPUT USER --
     const nameInput = document.querySelector('input[placeholder="Name"]');
     const emailInput = document.querySelector('input[placeholder="Email"]');
+
     const name = nameInput.value;
     const email = emailInput.value;
 
@@ -13,7 +14,7 @@ document.querySelector(".submit__button").addEventListener("click", function() {
 
     // -- VALIDATE EMAIL --
     if (name && validateEmail(email)) {
-    
+
         nameInput.classList.add("valid");
         emailInput.classList.add("valid");
 
@@ -21,7 +22,7 @@ document.querySelector(".submit__button").addEventListener("click", function() {
         contactListContainer.classList.add("contact__list__container");
 
         const img = document.createElement("img");
-        img.src = 'https://dummyjson.com/image/400x200/008080/ffffff?text=Hello+Peter'; 
+        img.src = 'https://dummyjson.com/image/400x200/003366/ffffff?text=Hi+Sabrina';
         img.alt = `${name}'s profile picture`;
         contactListContainer.appendChild(img);
 
@@ -56,6 +57,7 @@ document.querySelector(".submit__button").addEventListener("click", function() {
 
     } else {
         alert("Please enter a valid name and email.");
-        
+
     }
-});
+})
+
